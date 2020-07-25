@@ -1,16 +1,16 @@
 
-
 #ifndef _RANGE_HPP_
 #define _RANGE_HPP_
 namespace itertools{
-    class range{
-        int _begin, _end;
 
+class range{
+        int _begin, _end;
     public:
         range(int begin, int end): _begin(begin), _end(end){}
-    typedef  int value_type;
-        class iterator{
-            int _data;
+      typedef int  value_type;
+
+class iterator{
+    int _data;
         public:
             explicit iterator(int d): _data(d) {};
             iterator& operator=(const iterator& other){

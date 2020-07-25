@@ -2,8 +2,6 @@
 #define COMPRESS_HPP
 #include <iostream>
 #include <vector>
-
-
 namespace itertools
 {
     template<typename cont , typename contbool> class compress
@@ -11,10 +9,9 @@ namespace itertools
         cont c;
         contbool c2;
         public:
-        explicit compress ( cont c, contbool c2) : c(c),c2(c2){
+         explicit compress ( cont c, contbool c2) : c(c),c2(c2){
             typename cont::iterator it= c.begin();
-            
-                    typename contbool::iterator it2= c2.begin();
+            typename contbool::iterator it2= c2.begin();
            int c1=0; int c3=0;
            while(it!=c.end())
            {
@@ -85,12 +82,7 @@ namespace itertools
          auto operator *()
          {return *it;
          }
-         
-         
-         
       };
-      
-      
     iterator begin()
     {
         return iterator(c.begin(),c.end(),c2.begin());
@@ -99,7 +91,6 @@ namespace itertools
     {
         return iterator(c.end(),c.end(),c2.end());
     }
-    
 };
 }
 #endif
